@@ -20,6 +20,8 @@
     text-decoration: none;
     display: flex;
     align-items: center;
+    widht: 150px;
+    max-widht: 100%;
 }
 
 .site-logo {
