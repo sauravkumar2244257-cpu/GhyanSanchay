@@ -1,0 +1,52 @@
+/* --- Global Styles --- */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+body { background-color: #f4f4f4; color: #333; line-height: 1.6; }
+
+/* --- Navbar & Logo --- */
+.main-header { background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+.navbar { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 10px 20px; }
+.logo-area a { text-decoration: none; display: flex; align-items: center; }
+.site-logo { height: 45px; margin-right: 10px; }
+.logo-text { font-size: 24px; font-weight: 800; color: #2c3e50; }
+.logo-text span { color: #e74c3c; }
+
+/* --- Navigation Links --- */
+.nav-links { list-style: none; display: flex; gap: 20px; }
+.nav-links a { text-decoration: none; color: #34495e; font-weight: 600; transition: 0.3s; }
+.nav-links a:hover { color: #e74c3c; }
+
+/* --- Layout --- */
+.container { display: flex; max-width: 1200px; margin: 20px auto; padding: 0 20px; gap: 30px; }
+.content { flex: 3; }
+.sidebar { flex: 1; }
+
+/* --- Blog Cards --- */
+.post { background: white; padding: 0; margin-bottom: 25px; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+.post-info { padding: 20px; }
+.blog-img { width: 100%; height: 220px; object-fit: cover; }
+.meta { font-size: 0.85rem; color: #7f8c8d; margin-bottom: 10px; }
+.read-more { color: #3498db; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 10px; }
+
+/* --- Search & Filters --- */
+.search-container { max-width: 800px; margin: 30px auto; display: flex; gap: 10px; padding: 0 20px; }
+#search-input { flex: 3; padding: 12px; border: 1px solid #ddd; border-radius: 5px; }
+#search-btn { flex: 1; background: #2c3e50; color: #fff; border: none; border-radius: 5px; cursor: pointer; }
+.category-filter button { padding: 8px 15px; margin: 5px; border: none; background: #3498db; color: white; border-radius: 20px; cursor: pointer; }
+
+/* --- Footer --- */
+.footer { text-align: center; padding: 30px; background: #2c3e50; color: white; margin-top: 40px; }
+
+/* --- Responsive Menu --- */
+#menu-toggle { display: none; }
+.menu-icon { display: none; font-size: 28px; cursor: pointer; }
+
+@media (max-width: 768px) {
+    .container { flex-direction: column; }
+    .menu-icon { display: block; }
+    .nav-links { 
+        position: absolute; top: 65px; right: -100%; background: #fff; 
+        width: 250px; flex-direction: column; padding: 20px; transition: 0.4s;
+        box-shadow: -5px 5px 15px rgba(0,0,0,0.1);
+    }
+    #menu-toggle:checked ~ .nav-links { right: 0; }
+}
