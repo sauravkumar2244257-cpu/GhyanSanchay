@@ -1,4 +1,68 @@
+/* --- Modern Navbar & Logo Styling --- */
+.main-header {
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.logo-area a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.site-logo {
+    height: 45px; /* Logo ki height yahan se control karein */
+    width: auto;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: 800;
+    color: #2c3e50;
+    letter-spacing: 1px;
+}
+
+.logo-text span {
+    color: #e74c3c; /* "NEWS" word ka color alag dikhane ke liye */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #34495e;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #e74c3c;
+}
+
+/* Mobile responsive ke liye */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
 /* Basic Reset */
 * {
     margin: 0;
