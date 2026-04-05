@@ -367,3 +367,58 @@ body {
     background-color: #2c3e50; /* Apni navbar ka color use karein */
     padding: 10px 0;
 }
+/* --- Hamburger Menu Logic --- */
+
+/* Pehle checkbox ko chhupa dein */
+#menu-toggle {
+    display: none;
+}
+
+/* Menu Icon (Three Lines) ki styling */
+.menu-icon {
+    display: block;
+    font-size: 28px;
+    cursor: pointer;
+    color: #2c3e50;
+    order: 2; /* Ise right side rakhne ke liye */
+}
+
+/* Links ko shuruat mein chhupana (Mobile View) */
+.nav-links {
+    position: absolute;
+    top: 60px;
+    right: -100%; /* Screen se bahar */
+    background: #ffffff;
+    width: 200px;
+    height: auto;
+    flex-direction: column;
+    box-shadow: -2px 5px 10px rgba(0,0,0,0.1);
+    transition: 0.5s;
+    padding: 20px;
+    border-radius: 0 0 0 10px;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 15px 0;
+}
+
+/* --- Jab Checkbox "Check" ho (Menu Click hone par) --- */
+#menu-toggle:checked ~ .nav-links {
+    right: 0; /* Menu andar aa jayega */
+}
+
+/* Desktop View (Badi screen par menu dikhega, lines nahi) */
+@media (min-width: 768px) {
+    .menu-icon {
+        display: none; /* Badi screen par three lines gayab */
+    }
+    .nav-links {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        box-shadow: none;
+        right: 0;
+    }
+}
