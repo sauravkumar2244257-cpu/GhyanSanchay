@@ -50,46 +50,46 @@ body { background-color: #f4f4f4; color: #333; line-height: 1.6; }
     }
     #menu-toggle:checked ~ .nav-links { right: 0; }
 }
-/* Screen se bahar scroll rokne ke liye */
-body {
-    overflow-x: hidden;
+
+/* 1. Sabse pehle checkbox ko hidden rakhein har jagah */
+#menu-toggle {
+    display: none;
 }
 
-/* Desktop par normal dikhega */
-.nav-links {
-    display: flex;
-    list-style: none;
+/* 2. Desktop par icon hide rahega */
+.menu-icon {
+    display: none;
 }
 
-/* Mobile Screens (max-width: 768px) */
+/* 3. Mobile view (768px se niche) */
 @media screen and (max-width: 768px) {
+    /* Menu icon ko yahan "block" karna zaroori hai */
+    .menu-icon {
+        display: block; 
+        font-size: 30px;
+        cursor: pointer;
+        color: #333; /* Color apni pasand ka rakhein */
+        padding: 10px;
+    }
+
     .nav-links {
         position: fixed;
-        right: -100%; /* Menu ko screen ke right side par bilkul bahar bhej diya */
-        top: 70px;    /* Header ki height ke hisaab se set karein */
-        flex-direction: column;
-        background-color: #fff; /* Aapka background color */
-        width: 100%;
+        right: -100%; /* Default hidden position */
+        top: 0;
+        width: 70%;  /* Pura 100% cover karne ke bajay 70% bhi rakh sakte hain */
         height: 100vh;
-        text-align: center;
-        transition: 0.3s all ease; /* Smooth animation ke liye */
-        z-index: 100;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: 0.4s ease-in-out;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        z-index: 999;
     }
 
-    /* Jab checkbox check ho (.nav-links ko wapas layein) */
+    /* Checkbox click hone par menu dikhega */
     #menu-toggle:checked ~ .nav-links {
-        right: 0; /* Menu screen ke andar aa jayega */
+        right: 0;
     }
-
-    /* Menu icon ki styling */
-    .menu-icon {
-        display: block;
-        cursor: pointer;
-        font-size: 28px;
-    }
-}
-
-/* Desktop par toggle button ko chhupane ke liye */
-#menu-toggle, .menu-icon {
-    display: none;
 }
