@@ -44,8 +44,14 @@ body { background-color: #f4f4f4; color: #333; line-height: 1.6; }
     .container { flex-direction: column; }
     .menu-icon { display: block; }
     .nav-links { 
-        position: absolute; top: 65px; right: -100%; background: #fff; 
-        width: 250px; flex-direction: column; padding: 20px; transition: 0.4s;
+        position: absolute; 
+        top: 65px; 
+        right: -100%; 
+        background: #fff; 
+        width: 150px; 
+        flex-direction: column; 
+        padding: 20px; 
+        transition: 0.4s;
         box-shadow: -5px 5px 15px rgba(0,0,0,0.1);
     }
     #menu-toggle:checked ~ .nav-links { right: 0; }
