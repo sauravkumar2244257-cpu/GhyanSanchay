@@ -50,3 +50,18 @@ body { background-color: #f4f4f4; color: #333; line-height: 1.6; }
     }
     #menu-toggle:checked ~ .nav-links { right: 0; }
 }
+
+.profile-img {
+    width: 150px;           /* Image ki choudai */
+    height: 150px;          /* Image ki unchai (width ke barabar rakhein) */
+    border-radius: 50%;     /* Ise perfect circle banane ke liye */
+    object-fit: cover;      /* Taaki image stretch na ho aur frame mein fit rahe */
+    border: 3px solid #3498db; /* Ek sundar blue border */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Thoda depth dene ke liye shadow */
+}
+
+.profile-img:hover {
+    transform: scale(1.05); /* 5% zoom effect */
+    transition: transform 0.3s ease; /* Smooth animation ke liye */
+    cursor: pointer;
+}
