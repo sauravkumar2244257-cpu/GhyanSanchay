@@ -50,3 +50,46 @@ body { background-color: #f4f4f4; color: #333; line-height: 1.6; }
     }
     #menu-toggle:checked ~ .nav-links { right: 0; }
 }
+/* Screen se bahar scroll rokne ke liye */
+body {
+    overflow-x: hidden;
+}
+
+/* Desktop par normal dikhega */
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+/* Mobile Screens (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        right: -100%; /* Menu ko screen ke right side par bilkul bahar bhej diya */
+        top: 70px;    /* Header ki height ke hisaab se set karein */
+        flex-direction: column;
+        background-color: #fff; /* Aapka background color */
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        transition: 0.3s all ease; /* Smooth animation ke liye */
+        z-index: 100;
+    }
+
+    /* Jab checkbox check ho (.nav-links ko wapas layein) */
+    #menu-toggle:checked ~ .nav-links {
+        right: 0; /* Menu screen ke andar aa jayega */
+    }
+
+    /* Menu icon ki styling */
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        font-size: 28px;
+    }
+}
+
+/* Desktop par toggle button ko chhupane ke liye */
+#menu-toggle, .menu-icon {
+    display: none;
+}
