@@ -1,7 +1,7 @@
 /* --- Global Styles --- */
 * { 
     margin: 0; 
-    padding: 10px; 
+    padding: 0; 
     box-sizing: border-box; 
     font-family: 'Segoe UI', sans-serif; 
   }
