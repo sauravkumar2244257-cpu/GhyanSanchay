@@ -208,6 +208,53 @@
         <p>&copy; 2026 MyBrand Website. All Rights Reserved.</p>
     </footer>
 
+    <script>
+    // Like/Dislike Logic
+    function handleLike() {
+        const lb = document.getElementById('likeBtn');
+        const db = document.getElementById('dislikeBtn');
+        lb.classList.toggle('active-like');
+        db.classList.remove('active-dislike');
+        
+        document.getElementById('likeText').innerText = lb.classList.contains('active-like') ? "Liked" : "Like";
+    }
+
+    function handleDislike() {
+        const lb = document.getElementById('likeBtn');
+        const db = document.getElementById('dislikeBtn');
+        db.classList.toggle('active-dislike');
+        lb.classList.remove('active-like');
+        document.getElementById('likeText').innerText = "Like";
+    }
+
+    // Subscribe Logic
+    function handleSubscribe() {
+        const sb = document.getElementById('subBtn');
+        sb.classList.toggle('subscribed');
+        sb.innerText = sb.classList.contains('subscribed') ? "Subscribed" : "Subscribe";
+    }
+
+    // Comment Toggle
+    function toggleComment() {
+        const cs = document.getElementById('commentSection');
+        cs.style.display = (cs.style.display === "block") ? "none" : "block";
+    }
+
+    // Post Comment Logic
+    function submitComment() {
+        const input = document.getElementById('commentInput');
+        const display = document.getElementById('commentDisplay');
+        
+        if(input.value.trim() !== "") {
+            const div = document.createElement('div');
+            div.className = 'single-comment';
+            div.innerHTML = `<strong>User:</strong> ${input.value}`;
+            display.prepend(div);
+            input.value = "";
+        }
+    }
+</script>
+
     <script src="script.js"></script>
 
 </body>
