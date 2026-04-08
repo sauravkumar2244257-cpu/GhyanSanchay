@@ -16,7 +16,7 @@ body { background-color: #f4f4f4; color: #333; line-height: 1.6; }
 .nav-links a:hover { color: #e74c3c; }
 
 /* --- Layout --- */
-.container { display: flex; max-width: 1200px; margin: 20px auto; padding: 0 5px; gap: 30px; }
+.container { display: flex; max-width: 1200px; margin: 20px auto; padding: 0 10px; gap: 30px; }
 .content { flex: 3; }
 .sidebar { flex: 1; }
 
