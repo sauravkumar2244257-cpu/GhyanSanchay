@@ -171,8 +171,12 @@ body {
         transition: 0.4s;
         box-shadow: -5px 5px 15px rgba(0,0,0,0.1);
     }
-    #menu-toggle:checked ~ .nav-links { right: 0; }
-}
+    #menu-toggle:checked ~ 
+    .nav-links 
+    { 
+        right: 0; 
+    }
+    }
 
 .profile-img {
     width: 150px;           /* Image ki choudai */
