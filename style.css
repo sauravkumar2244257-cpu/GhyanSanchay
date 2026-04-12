@@ -1,3 +1,41 @@
+/* Navbar ke liye flex adjustment */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Login Button Styling */
+.nav-login-btn {
+    background-color: #007bff; /* Blue color */
+    color: white !important;
+    padding: 8px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.nav-login-btn:hover {
+    background-color: transparent;
+    color: #007bff !important;
+    border-color: #007bff;
+}
+
+/* Mobile responsive ke liye */
+@media (max-width: 768px) {
+    .header-action {
+        margin-right: 50px; /* Menu icon se thoda pehle dikhane ke liye */
+    }
+    
+    .nav-login-btn {
+        padding: 5px 15px;
+        font-size: 12px;
+    }
+}
+
 /* --- Global Styles --- */
 * { 
     margin: 0; 
