@@ -19,8 +19,7 @@ async function fetchBlogs() {
             excerpt: row.c[5]?.v || '',
             content: row.c[6]?.v || ''
         }));
-// मान लें कि 'posts' आपकी Google Sheet से लिया गया डेटा है
-posts.sort((a, b) => b.id - a.id);
+
         // Render logic based on page
         if (document.getElementById('blog-container')) {
             renderBlogs(myBlogs);
