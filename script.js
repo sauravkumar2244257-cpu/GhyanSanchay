@@ -9,9 +9,7 @@ async function fetchBlogs() {
         const text = await response.text();
         const jsonData = JSON.parse(text.substring(47).slice(0, -2));
         const rows = jsonData.table.rows;
-posts.sort((a, b) => {
-  return new Date(b.date) - new Date(a.date);
-});
+
         myBlogs = rows.map((row, index) => ({
             id: index,
             title: row.c[1]?.v || 'Untitled',
