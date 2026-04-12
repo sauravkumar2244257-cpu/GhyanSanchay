@@ -19,7 +19,8 @@ async function fetchBlogs() {
             excerpt: row.c[5]?.v || '',
             content: row.c[6]?.v || ''
         }));
-
+        
+myBlogs.reverse();
         // Render logic based on page
         if (document.getElementById('blog-container')) {
             renderBlogs(myBlogs);
@@ -58,7 +59,7 @@ function renderBlogs(blogsToDisplay) {
 function handleSinglePost() {
     const params = new URLSearchParams(window.location.search);
     const id = params.get('id');
-    const blog = myBlogs[id];
+    const blog = myBlogs.find(b => b.id == id);;
 
     if (blog) {
         document.getElementById('post-title').innerText = blog.title;
