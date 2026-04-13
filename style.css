@@ -235,3 +235,6 @@ body {
     color: white; 
     margin-top: 40px; 
 }
+.profile-img {
+    width: 100px;
+}
