@@ -38,7 +38,7 @@
 
 /* --- Global Styles --- */
 * { 
-    margin: 0; 
+    margin: 5px; 
     padding: 0; 
     box-sizing: border-box; 
     font-family: 'Segoe UI', sans-serif; 
@@ -144,7 +144,7 @@ body {
 /* --- Search & Filters --- */
 .search-container { 
     max-width: 800px; 
-    margin: 30px auto; 
+    margin: 20px auto; 
     display: flex; 
     gap: 10px; 
     padding: 0 20px; 
@@ -213,7 +213,6 @@ body {
     .nav-links 
     { 
         right: 0; 
-    }
     }
 
 .profile-img {
