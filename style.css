@@ -28,8 +28,8 @@
 @media (max-width: 768px) {
     .header-action {
         margin-right: 10px; /* Menu icon se thoda pehle dikhane ke liye */
-        margin-top: 10px;
-        flex-direction: right;
+        padding: 10px;
+        align-items: right;
     }
     
     .nav-login-btn {
