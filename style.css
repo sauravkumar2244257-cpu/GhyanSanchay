@@ -156,6 +156,13 @@ body {
     height: 220px; 
     object-fit: cover; 
 }
+/* --- Read More Links --- */
+.read-more { 
+    color: #3498db; 
+    text-decoration: none; 
+    font-weight: bold; 
+    display: inline-block; 
+    margin-top: 10px;
 
 /* --- Category Buttons Styling & Hover --- */
 .category-filter button { 
