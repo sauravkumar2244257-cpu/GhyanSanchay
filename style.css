@@ -163,6 +163,7 @@ body {
     font-weight: bold; 
     display: inline-block; 
     margin-top: 10px;
+}
 
 /* --- Category Buttons Styling & Hover --- */
 .category-filter button { 
