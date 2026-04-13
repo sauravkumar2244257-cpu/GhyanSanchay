@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GhyanSanchay - Register</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        /* Register page ke liye special styling */
+        .register-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 70vh;
+            padding: 40px 20px;
+        }
+        .register-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 450px;
+        }
+        .register-card h2 { 
+            text-align: center;
+            margin-bottom: 20px; 
+            color: #333; 
+        }
+        .input-group { margin-bottom: 15px; }
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .register-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #28a745; /* Green color for signup */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .register-btn:hover { background-color: #218838; }
+        .login-link { 
+            text-align: center; 
+            margin-top: 15px; 
+            font-size: 14px; 
+        }
+        .login-link a { color: #007bff; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="logo-area">
+                <a href="index.html">
+                    <img src="logo.png" alt="Logo" class="site-logo">
+                    <span class="logo-text">Ghyan<span>Sanchay</span></span>
+                </a>
+            </div>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="header-action">
+                <a href="login.html" class="nav-login-btn">Login</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main class="content">
+            <div class="register-wrapper">
+                <div class="register-card">
+                    <h2>Create New Account</h2>
+                    <form id="registerForm">
+                        <div class="input-group">
+                            <label>Poora Naam</label>
+                            <input type="text" id="fullname" placeholder="Apna naam likhein" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Mobile Number or Email ID</label>
+                            <input type="text" id="identifier" placeholder="Mobile Number ya Email ID" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Password</label>
+                            <input type="password" id="password" placeholder="Strong password banayein" required>
+                        </div>
+                        <button type="submit" class="register-btn">Sign Up</button>
+                    </form>
+                    <div class="login-link">
+                        Pehle se account hai? <a href="login.html">Login karein</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 GhyanSanchay. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert("Registration successful! Ab aap login kar sakte hain.");
+            window.location.href = "login.html"; // Signup ke baad login page par bhej dega
+        });
+    </script>
+</body>
+</html>
