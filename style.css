@@ -99,8 +99,8 @@ body {
 .container { 
     display: flex; 
     max-width: 1200px; 
-    margin: 20px auto; 
-    padding: 0 20px; 
+    margin: 10px auto; 
+    padding: 0 5px; 
     gap: 30px; 
 }
 
