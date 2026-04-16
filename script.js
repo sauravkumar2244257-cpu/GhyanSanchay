@@ -43,31 +43,21 @@ function renderBlogs(blogsToDisplay) {
         return;
     }
 
-    function renderBlogs(blogsToDisplay) {
-    const container = document.getElementById('blog-container');
-    if (!container) return;
-
-    if (blogsToDisplay.length === 0) {
-        container.innerHTML = "<p style='text-align:center;'>Maaf kijiyega, koi result nahi mila.</p>";
-        return;
-    }
-
-    // Yahan humne poore content ko <a> tag ke andar wrap kar diya hai
+    
     container.innerHTML = blogsToDisplay.map(blog => `
         <article class="post">
-            <a href="post.html?id=${blog.id}" style="text-decoration: none; color: inherit; display: block;">
-                <img src="${blog.image}" class="blog-img" alt="${blog.title}">
-                <div class="post-info">
-                    <h2>${blog.title}</h2>
-                    <p class="meta">${blog.date} | <b>${blog.category}</b></p>
-                    <p>${blog.excerpt}</p>
-                    <span class="read-more" style="color: #007bff; font-weight: bold; display: inline-block; margin-top: 10px;">Read More →</span>
-                </div>
-            </a>
+            <img src="${blog.image}" class="blog-img" alt="${blog.title}">
+            <div class="post-info">
+                <h2>${blog.title}</h2>
+                <p class="meta">${blog.date} | <b>${blog.category}</b></p>
+                <p>${blog.excerpt}</p>
+                <a href="post.html?id=${blog.id}" class="read-more">Read More</a>
+            </div>
         </article>
     `).join('');
 }
-function handleSinglePost() {
+
+    function handleSinglePost() {
     const params = new URLSearchParams(window.location.search);
     const id = params.get('id');
     const blog = myBlogs.find(b => b.id == id);;
