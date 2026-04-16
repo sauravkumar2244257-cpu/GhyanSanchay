@@ -43,15 +43,14 @@ function renderBlogs(blogsToDisplay) {
         return;
     }
 
-    
     container.innerHTML = blogsToDisplay.map(blog => `
-        <article class="post">
+        <article class="post" onclick="location.href='post.html?id=${blog.id}'" style="cursor: pointer;">
             <img src="${blog.image}" class="blog-img" alt="${blog.title}">
             <div class="post-info">
                 <h2>${blog.title}</h2>
                 <p class="meta">${blog.date} | <b>${blog.category}</b></p>
                 <p>${blog.excerpt}</p>
-                <a href="post.html?id=${blog.id}" class="read-more">Read More</a>
+                <span class="read-more" style="color: #007bff; font-weight: bold;">Read More →</span>
             </div>
         </article>
     `).join('');
