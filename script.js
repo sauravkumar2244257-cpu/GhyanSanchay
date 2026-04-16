@@ -45,6 +45,7 @@ function renderBlogs(blogsToDisplay) {
 
     container.innerHTML = blogsToDisplay.map(blog => `
         <article class="post" onclick="location.href='post.html?id=${blog.id}'" style="cursor: pointer;">
+        <a href="post.html?id=${blog.id}" style="text-decoration: none; color: inherit; display: block;">
             <img src="${blog.image}" class="blog-img" alt="${blog.title}">
             <div class="post-info">
                 <h2>${blog.title}</h2>
