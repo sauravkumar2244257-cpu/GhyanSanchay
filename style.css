@@ -241,6 +241,7 @@ body {
     margin-top: 10px;
     margin-left: 10px;
 }
+/* Share button */
 .share-btn {
     padding: 8px 18px; 
     margin: 5px; 
@@ -252,4 +253,13 @@ body {
     font-weight: 600;
     transition: all 0.3s ease; /* Animation smooth karne ke liye */
     outline: none;
+}
+.share-btn button:hover { 
+    background: transparent; /* Background gayab ho jayega */
+    color: #3498db;          /* Text color blue ho jayega */
+    transform: translateY(-3px); /* Button thoda upar uthega */
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3); /* Blue shadow */
+}
+.share-btn button:active {
+    transform: scale(0.95); /* Click karne par thoda dabega */
 }
