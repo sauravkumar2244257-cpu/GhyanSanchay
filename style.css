@@ -241,3 +241,15 @@ body {
     margin-top: 10px;
     margin-left: 10px;
 }
+.share-btn {
+    padding: 8px 18px; 
+    margin: 5px; 
+    border: 2px solid #3498db; /* Border add kiya */
+    background: #3498db; 
+    color: white; 
+    border-radius: 20px; 
+    cursor: pointer; 
+    font-weight: 600;
+    transition: all 0.3s ease; /* Animation smooth karne ke liye */
+    outline: none;
+}
