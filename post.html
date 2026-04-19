@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="YHxliyiuN0vMyvrulU1vr2tAeAIIh9qqgD-xkfaFFBc" />
     <title>GhyanSanchay - Artical</title>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 <style>
@@ -106,7 +106,7 @@
 
     textarea:focus { border-color: var(--primary-blue); }
 
-    .send-btn, .share-btn {
+    .send-btn, {
         background: var(--primary-blue);
         color: white;
         border: none;
@@ -130,7 +130,26 @@
         border-left: 4px solid var(--primary-blue);
         animation: slideIn 0.3s ease;
     }
+/* Share Button */
+.share-btn {
+    background-color: #25D366; /* WhatsApp Green color ya apni theme ka color */
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Text aur Arrow ke beech ki doori */
+    transition: 0.3s;
+}
 
+.share-btn:hover {
+    background-color: #128C7E;
+    transform: scale(1.05);
+}
+    
     @keyframes slideIn {
         from { opacity: 0; transform: translateX(-10px); }
         to { opacity: 1; transform: translateX(0); }
@@ -199,7 +218,7 @@
     <!-- </div> -->
 <!-- </div> -->
             <button onclick="shareBlog()" class="share-btn">
-                Share ➦
+              Share <i class="fa-solid fa-share"></i>
             </button>
     </article>
 </main>
