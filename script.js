@@ -113,10 +113,4 @@ const shareBlog = async () => {
     }
 };
 
-// Is code ko apne script.js ya HTML ke niche <script> tag mein daalein
-const menuIcon = document.querySelector('.menu-icon'); // Check karein aapki class ka naam kya hai
-const sidebar = document.querySelector('.sidebar');
 
-menuIcon.addEventListener('click', () => {
-    sidebar.classList.toggle('active');
-});
