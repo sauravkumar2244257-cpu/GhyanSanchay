@@ -108,26 +108,14 @@ body {
     flex: 3; 
 }
 
-/* Aapka menu container */
 .sidebar { 
-    position: fixed;
-    right: 0;
-    top: 0;
-    height: 100%;
-    width: 250px; /* Zarurat ke hisab se */
-    background-color: white;
-    z-index: 1000; /* Isse menu hamesha content ke upar rahega */
-    box-shadow: -2px 0 5px rgba(0,0,0,0.2);
-    display: none; /* Default mein hide rakhein */
+    flex: 1; 
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    height: fit-content;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
-/* .sidebar {  */
-    /* flex: 1;  */
-    /* background: #fff; */
-    /* padding: 20px; */
-    /* border-radius: 10px; */
-    /* height: fit-content; */
-    /* box-shadow: 0 4px 15px rgba(0,0,0,0.05); */
-/* } */
 
 /* --- Search Container --- */
 .search-container { 
@@ -155,10 +143,6 @@ body {
 }
 
 /* --- Blog Cards --- */
-.post-container {
-    padding: 15px;
-    box-sizing: border-box;
-}
 
 .post { 
     background: white; 
@@ -180,17 +164,6 @@ body {
     font-weight: bold; 
     display: inline-block; 
     margin-top: 10px;
-}
-
-h1, .post-title {
-    word-wrap: break-word;
-    font-size: 1.5rem; /* Mobile ke liye chhota size */
-}
-
-@media (min-width: 768px) {
-    h1, .post-title {
-        font-size: 2.5rem; /* Desktop ke liye bada size */
-    }
 }
 
 /* --- Category Buttons Styling & Hover --- */
