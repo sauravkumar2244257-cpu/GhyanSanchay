@@ -95,7 +95,7 @@ fetchBlogs();
 const shareBlog = async () => {
     const shareData = {
         title: document.title, // Blog ka title
-        text: 'Ghyan Sanchay par is post ko zaroor padhein:', // Description
+        text: 'Read this post on ghyan sanchay:', // Description
         url: window.location.href, // Current Page ka URL (Dynamic)
     };
 
