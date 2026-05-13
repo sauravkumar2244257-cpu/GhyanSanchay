@@ -92,25 +92,50 @@ document.addEventListener('DOMContentLoaded', () => {
 
 fetchBlogs();
 
-const shareBlog = async () => {
-    const shareData = {
-        title: document.title, // Blog ka title
-        text: 'Ghyan Sanchay par is post ko zaroor padhein:', // Description
-        url: window.location.href, // Current Page ka URL (Dynamic)
-    };
+// const shareBlog = async () => {
+    // const shareData = {
+        // title: document.title, // Blog ka title
+        // text: 'Ghyan Sanchay par is post ko zaroor padhein:', // Description
+        // url: window.location.href, // Current Page ka URL (Dynamic)
+    // };
 
-    try {
-        if (navigator.share) {
+    // try {
+        // if (navigator.share) {
             // Mobile devices aur Chrome ke liye best
-            await navigator.share(shareData);
-        } else {
+            // await navigator.share(shareData);
+        // } else {
             // Fallback: Agar browser support nahi karta (WhatsApp Direct Link)
-            const waUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(shareData.text + " " + shareData.url)}`;
-            window.open(waUrl, '_blank');
-        }
-    } catch (err) {
-        console.error('Error sharing:', err);
+            // const waUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(shareData.text + " " + shareData.url)}`;
+            // window.open(waUrl, '_blank');
+        // }
+    // } catch (err) {
+        // console.error('Error sharing:', err);
+    // }
+// };
+
+async function shareBlog(title, text, url, imageUrl) {
+  try {
+    // Image file fetch karke share karne ke liye
+    const response = await fetch(imageUrl);
+    const blob = await response.blob();
+    const file = new File([blob], 'blog-image.jpg', { type: blob.type });
+
+    if (navigator.canShare && navigator.canShare({ files: [file] })) {
+      await navigator.share({
+        title: title,
+        text: `${title}\n\nRead more here:`,
+        url: url,
+        files: [file]
+      });
+    } else {
+      // Agar browser file share support nahi karta to normal share
+      await navigator.share({
+        title: title,
+        text: title,
+        url: url
+      });
     }
-};
-
-
+  } catch (error) {
+    console.log('Sharing failed', error);
+  }
+}
