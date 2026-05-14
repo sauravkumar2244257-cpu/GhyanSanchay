@@ -92,26 +92,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
 fetchBlogs();
 
-// const shareBlog = async () => {
-    // const shareData = {
-        // title: document.title, // Blog ka title
-        // text: 'Read this post on ghyan sanchay:', // Description
-        // url: window.location.href, // Current Page ka URL (Dynamic)
-    // };
+const shareBlog = async () => {
+    const shareData = {
+        title: document.title, // Blog ka title
+        text: 'Read this post on ghyan sanchay:', // Description
+        url: window.location.href, // Current Page ka URL (Dynamic)
+    };
 
-    // try {
-        // if (navigator.share) {
+    try {
+        if (navigator.share) {
             // Mobile devices aur Chrome ke liye best
-            // await navigator.share(shareData);
-        // } else {
+            await navigator.share(shareData);
+        } else {
             // Fallback: Agar browser support nahi karta (WhatsApp Direct Link)
-            // const waUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(shareData.text + " " + shareData.url)}`;
-            // window.open(waUrl, '_blank');
-        // }
-    // } catch (err) {
-        // console.error('Error sharing:', err);
-    // }
-// };
+            const waUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(shareData.text + " " + shareData.url)}`;
+            window.open(waUrl, '_blank');
+        }
+    } catch (err) {
+        console.error('Error sharing:', err);
+    }
+};
 
 
 
