@@ -113,21 +113,3 @@ const shareBlog = async () => {
     }
 };
 
-
-
-const shareData = {
-  title: 'Blog ki Heading',
-  text: 'Is blog ko zaroor padhein:',
-  url: window.location.href
-}
-
-const btn = document.querySelector('#share-button');
-
-btn.addEventListener('click', async () => {
-  try {
-    await navigator.share(shareData);
-    console.log('Successfully shared');
-  } catch (err) {
-    console.log('Error: ' + err);
-  }
-});
